@@ -31,6 +31,12 @@ class _OnBoardingPageViewState extends State<OnBoardingPageView> {
   }
 
   @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Stack(
       children: [

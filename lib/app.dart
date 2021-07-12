@@ -1,3 +1,4 @@
+import 'package:demo_front_end_flutter_developer/home_screen/home_screen.dart';
 import 'package:demo_front_end_flutter_developer/onboarding/onboarding_page.dart';
 import 'package:demo_front_end_flutter_developer/onboarding/onboarding_page_view.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +11,13 @@ class App extends StatelessWidget {
     return const MaterialApp(
       home: SafeArea(
         child: Scaffold(
-          body: OnBoardingPageView(
+          body: HomeScreen(),
+        ),
+      ),
+    );
+  }
+
+  final onb = const OnBoardingPageView(
             children: [
               OnboardingPage(
                 title: 'Welcome',
@@ -31,9 +38,5 @@ class App extends StatelessWidget {
                 imageURL: 'assets/onboarding.png',
               )
             ],
-          ),
-        ),
-      ),
-    );
-  }
+          );
 }
