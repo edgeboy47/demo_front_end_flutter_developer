@@ -1,7 +1,7 @@
 name: demo_front_end_flutter_developer
 description: A new Flutter project.
 
-publish_to: 'none'
+publish_to: "none"
 
 version: 1.0.0+1
 
@@ -21,6 +21,6 @@ dev_dependencies:
 
 flutter:
   assets:
-    - assets/onboarding.png
-  
+    - assets/
+
   uses-material-design: true
