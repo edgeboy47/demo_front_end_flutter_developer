@@ -12,7 +12,56 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: SafeArea(
-        child: _userProfilePage,
+        child: Scaffold(
+          appBar: AppBar(
+            title: const Text(
+              'Darrion Mills demo_front_end_flutter_developer',
+              maxLines: 5,
+            ),
+          ),
+          body: Center(
+            child: Builder(builder: (context) {
+              return Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (c) => _onboardingPage,
+                        ),
+                      );
+                    },
+                    child: const Text('Onboarding UI'),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (c) => _homeScreenPage,
+                        ),
+                      );
+                    },
+                    child: const Text('HomeScreen UI'),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (c) => _userProfilePage,
+                        ),
+                      );
+                    },
+                    child: const Text('User Profile UI'),
+                  ),
+                ],
+              );
+            }),
+          ),
+        ),
       ),
     );
   }
